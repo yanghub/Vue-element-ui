@@ -1,0 +1,21 @@
+spring:
+  #连接数据库mysql
+  datasource:
+    url: jdbc:mysql://localhost:3306/cam?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+    username: root
+    password: 111111
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+    mybatis-plus:
+      mapper-locations: classpath*:mybatis/**/*.xml
+      config-location: classpath:sqlmapConfig-admin-mybatis.xml
+    #显示sql语句
+  jpa:
+    show-sql: true
+#    sql格式化显示
+    properties:
+      hibernate:
+        format_sql: true  
+        #设置后端转发端口8181
+server:
+  port: 8181
